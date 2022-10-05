@@ -35,10 +35,14 @@ public class MovieStore {
     
     }
 
-    public String returnList(int N){
+    public String returnList(int N) throws BillMovieExcept{
         String list;
         
-        if(N > Inventory.size() ){
+        if(Inventory.size() == 0) {
+        	throw new BillMovieExcept("Sorry, we are all out of movies!");
+        }
+        
+        else if(N > Inventory.size() ){
             list = "All Movies - " + Inventory.size() + "in total:\n";
             for(int i = 0; i<Inventory.size(); i++){
                 Movie y = Inventory.get(i).copyOf(); 
@@ -50,6 +54,7 @@ public class MovieStore {
                 }
             }
         }
+        
         else{
             
             Collections.sort(Inventory);
@@ -64,6 +69,10 @@ public class MovieStore {
 
         }
         return list;
+    }
+    
+    public void clear() {
+    	Inventory.clear();
     }
 
 }
