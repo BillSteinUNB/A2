@@ -1,3 +1,4 @@
+package ass2.bjs;
 import assn2.bjs.BillMovieExcept;
 import assn2.bjs.Movie;
 import assn2.bjs.MovieStore;
