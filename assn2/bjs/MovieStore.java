@@ -1,3 +1,5 @@
+package assn2.bjs;
+
 import java.util.ArrayList;
 import java.text.DecimalFormat;
 import java.util.Collections;
@@ -7,7 +9,7 @@ public class MovieStore {
 
     private static final DecimalFormat df = new DecimalFormat("0.0");
 
-    private Movie movie;
+
     private ArrayList<Movie> Inventory = new ArrayList<>();
 
     public MovieStore(){

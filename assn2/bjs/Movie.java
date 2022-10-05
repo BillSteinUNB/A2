@@ -1,3 +1,5 @@
+package assn2.bjs;
+
 import java.util.ArrayList;
 public class Movie implements Comparable<Movie>{
 
